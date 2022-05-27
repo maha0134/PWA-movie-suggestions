@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggested Movies</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/img/svg/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    
+</head>
+<body id="suggest">
+        <header class="masthead">
+            <h1>
+                <a href="./index.html">
+                    Suggest A Movie
+                </a>
+            </h1>
+            <section class="searchArea">
+                <form id="searchForm" name="searchForm" action="submit">
+                    <input type="search" id="inputSearch" name="inputSearch" value="" />
+                    <button class = "searchButton">
+                        <i class="material-icons-round md-36">
+                            search
+                        </i>
+                    </button>
+                </form>
+            </section>
+        </header>
+        <main>
+            <section class="titleArea">
+                <!-- messages and page titles -->
+                <div class="online">
+                    <div class="offline-dot"></div>
+                    <p>You are offline</p>
+                </div>
+                <h2 class="displayMessage">Here are some movies similar to <span class="keyword"></span>:</h2>
+            </section>
+            <section class="contentArea">
+                <ul class="list-unstyled">
+                    <!-- Cards will go here -->
+                </ul>
+                
+            </section>
+        </main>
+    <script src="./js/app.js"></script>
+</body>
+</html>
