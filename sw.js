@@ -58,13 +58,13 @@ self.addEventListener("activate", (ev) => {
 });
 
 self.addEventListener("fetch", (ev) => {
-  // let options = {};
-  // if (ev.request.destination.toString() === "document") {
-  //   // fetching a page
-  //   options = { ignoreSearch: true };
-  // }
+  let options = {};
+  if (ev.request.destination.toString() === "document") {
+    // fetching a page
+    options = { ignoreSearch: true };
+  }
   ev.respondWith(
-    caches.match(ev.request).then((cacheResponse) => {
+    caches.match(ev.request, options).then((cacheResponse) => {
       if (cacheResponse) {
         return cacheResponse;
       }
